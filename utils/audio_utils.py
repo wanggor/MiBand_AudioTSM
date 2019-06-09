@@ -191,22 +191,22 @@ class play_audio(QThread):
             if(heartrate < 60):
                 speed = 2
                 current_file = os.path.join(self.filepath ,"track" , str(i) + "-s" + ".wav")
-                m = open("fast.txt", "r")
+                #m = open("fast.txt", "r")
             elif(heartrate > 100):
                 speed = 0
                 current_file = os.path.join(self.filepath ,"track" , str(i) + "-f" + ".wav")
-                m = open("slow.txt", "r")
+                #m = open("slow.txt", "r")
             else:
                 speed = 1
                 current_file = os.path.join(self.filepath ,"track" , str(i) + "-n" + ".wav")
-                m = open("normal.txt", "r")
+                #m = open("normal.txt", "r")
     
-            mi = m.read()
+            #mi = m.read()
     
-            if(mi == ''):
-                mi = 0
+            #if(mi == ''):
+           #     mi = 0
     
-            start_mi_band = float(mi)
+            start_mi_band = float(0)
             end_mi_band = time.time()
     
             delay_mi_band = end_mi_band - start_mi_band
